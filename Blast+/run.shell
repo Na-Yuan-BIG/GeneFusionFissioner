@@ -1,0 +1,2 @@
+$PATH/ncbi-blast-2.12.0+/bin/makeblastdb -in GenomeA.fas -dbtype prot  -parse_seqids  -out GenomeA
+$PATH/ncbi-blast-2.12.0+/bin/blastdbcmd -db  $Dir/GenomeA  -entry_batch ex_lst   -out ex_GenomeA.fa 
