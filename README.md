@@ -3,7 +3,7 @@
 
 ================
 
-Current working version  fdfBLAST_version2021 is the update of fdfBLAST_1.20120704.pl. New version is executed by shell scripts  instead of  interface input.
+The current working version fdfBLAST_version2021 is an update of fdfBLAST_1.20120704.pl. The new version is executed by a shell script, instead of the original interface input.
 
 If you have any questions, please contact yuann@big.ac.cn.
 
