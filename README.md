@@ -1,9 +1,9 @@
-# fdfBLAST_version2021
+# GeneFusionFissioner
 
 
 ================
 
-The current working version fdfBLAST_version2021 is an update of fdfBLAST_1.20120704.pl. The new version is executed by a shell script, instead of the original interface input.
+GeneFusionFissioner is an update of fdfBLAST_1.20120704.pl. The new version is executed by a shell script, instead of the original interface input.
 
 If you have any questions, please contact yuann@big.ac.cn.
 
@@ -22,7 +22,7 @@ HMMER3 and PFAM-A
 
 wget https://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.12.0+-x64-linux.tar.gz
 
-## Running fdfBLAST 
+## Running GeneFusionFissioner
 
 ### 1. Run BLAST+
 
