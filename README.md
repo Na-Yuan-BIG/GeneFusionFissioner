@@ -87,25 +87,25 @@ perl  -pe 's[,][]g' all_domains.csv > ex_lst
 
 ##### #first makeblastdb
 
-../../ncbi-blast-2.12.0+/bin/makeblastdb -in GenomeA.fas -dbtype prot  -parse_seqids  -out GenomeA
+./ncbi-blast-2.12.0+/bin/makeblastdb -in GenomeA.fas -dbtype prot  -parse_seqids  -out GenomeA
 
-../../ncbi-blast-2.12.0+/bin/makeblastdb -in GenomeB.fas -dbtype prot  -parse_seqids  -out GenomeB
+./ncbi-blast-2.12.0+/bin/makeblastdb -in GenomeB.fas -dbtype prot  -parse_seqids  -out GenomeB
 
-../../ncbi-blast-2.12.0+/bin/makeblastdb -in GenomeC.fas -dbtype prot  -parse_seqids  -out GenomeC
+./ncbi-blast-2.12.0+/bin/makeblastdb -in GenomeC.fas -dbtype prot  -parse_seqids  -out GenomeC
 
 ##### #extract sequences from genome using ex_lst
 
-../../../ncbi-blast-2.12.0+/bin/blastdbcmd -db  ../../3genomes/GenomeA  -entry_batch ex_lst   -out ex_GenomeA.fa 
+./ncbi-blast-2.12.0+/bin/blastdbcmd -db  $Dir/3genomes/GenomeA  -entry_batch ex_lst   -out ex_GenomeA.fa 
 
-../../../ncbi-blast-2.12.0+/bin/blastdbcmd -db  ../../3genomes/GenomeB  -entry_batch ex_lst   -out ex_GenomeB.fa 
+./ncbi-blast-2.12.0+/bin/blastdbcmd -db  $Dir/3genomes/GenomeB  -entry_batch ex_lst   -out ex_GenomeB.fa 
 
-../../../ncbi-blast-2.12.0+/bin/blastdbcmd -db  ../../3genomes/GenomeC  -entry_batch ex_lst   -out ex_GenomeC.fa
+./ncbi-blast-2.12.0+/bin/blastdbcmd -db  $Dir/3genomes/GenomeC  -entry_batch ex_lst   -out ex_GenomeC.fa
 <br>
 ####  4) Run Pfam and parse
 
 cat ex_*.fa >all_domain_seqs.fas
 
-../../../pfam/hmmer3-3/bin/hmmscan  --cpu 6 --noali  ../../../pfam/Pfam-A.hmm   all_domain_seqs.fas >output.out 
+./pfam/hmmer3-3/bin/hmmscan  --cpu 6 --noali  ./pfam/Pfam-A.hmm   all_domain_seqs.fas >output.out 
 
 perl hmm3scan_parser.pl -i output.out -o output.parse
 <br>
